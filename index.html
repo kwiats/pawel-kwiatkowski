@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pawel Kwiatkowski</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#fff;     /* change to #e6002e for red text */
+    --soft:#ccc;
+    --red:#960400;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%; margin:0;}
+
+  /* GIF background */
+  .bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: #000 url("redhands.gif") center center / cover no-repeat;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    color: var(--ink);
+    overflow: hidden;
+  }
+
+  .card{
+    display: flex;
+    flex-direction: row;
+    max-width: 90%;
+    width: 100%;
+    margin-top: 25px;
+    justify-content: space-between;
+  }
+ 
+
+  .title{
+    font-family:"Bebas Neue",sans-serif;
+    font-weight:700;
+    font-size:clamp(27px, 9vw, 38px);
+    margin:0 0 20px;
+    letter-spacing: 0.02em;
+    color:var(--red);
+  }
+
+  .subtitle{
+    font-family:"Libre Baskerville",serif;
+    font-size:clamp(12px,2vw,16px);
+    color:var(--soft);
+    margin-bottom:28px;
+  }
+
+  .credits{
+    font-family:"Libre Baskerville",serif;
+    font-size:clamp(12px,2vw,16px);
+    line-height:1.6;
+  }
+  .label{ color:var(--soft); text-transform:uppercase; letter-spacing:.2em; font-size:.8em; }
+  .credits {    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+  .credits a{
+    color:var(--red);
+    text-decoration:none;
+    font-size:clamp(12px,2vw,16px);
+
+  }
+  .credits a:hover{opacity:.75}
+
+  footer{
+    position:fixed;
+    left:0; right:0; bottom:12px;
+    font-family:"Libre Baskerville",serif;
+    font-size:9px; color:#888; letter-spacing:.12em;
+  }
+</style>
+</head>
+<body>
+  <div class="bg"></div>
+
+  <main class="card">
+    <h1 class="title">Paweł Kwiatkowski</h1>
+
+    <div class="credits">
+      <div><a href="https://instagram.com/pawelkwiatkowski__/" target="_blank">@pawelkwiatkowski__</a></div>
+    </div>
+  </main>
+
+  <footer>© <span id="y"></span> Paweł Kwiatkowski — All Rights Reserved</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
